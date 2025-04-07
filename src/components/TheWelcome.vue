@@ -16,7 +16,7 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
       <img alt="Vue logo" class="logo" src="@/assets/Lumon.png" width="125" height="125" />
 
       <div class="wrapper">
-        <HelloWorld msg="Welcome to LUMON" />
+        <HelloWorld msg="Welcome to AP2-LABS" />
       </div>
     </header>
 
