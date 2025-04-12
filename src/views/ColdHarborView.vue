@@ -12,9 +12,9 @@
           @click="submit">Submit</button>
       </div>
     </div>
-    <div class="back-button">
+    <!-- <div class="back-button">
       <RouterLink to="/">Back</RouterLink>
-    </div>
+    </div> -->
   </div>  
 </template>
 
@@ -23,7 +23,7 @@ const macrodata = defineModel();
 
 async function submit(event) {
   const value = macrodata.value;
-  res =await fetch('http://localhost:3000/api/cold-harbor', {
+  const res = await fetch('/cold-harbor', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

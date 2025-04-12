@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import ProjectsView from '../views/ProjectsView.vue'
 import ColdHarborView from '../views/ColdHarborView.vue'
 import DranesvilleView from '@/views/DranesvilleView.vue'
 import AllentownView from '@/views/AllentownView.vue'
@@ -13,11 +13,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: AboutView
     },
     {
       path: '/allenstown',
@@ -39,6 +34,11 @@ const router = createRouter({
       name: 'cold-harbor',
       component: ColdHarborView
     },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: ProjectsView
+    },    
   ],
 })
 

@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.post('/api/cold-harbor', (req, res) => {
+app.post('/cold-harbor', (req, res) => {
   const data = req.body
   console.log(data)
   res.send(`Received data: ${JSON.stringify(data)}`)

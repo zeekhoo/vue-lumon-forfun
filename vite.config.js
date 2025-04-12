@@ -16,6 +16,6 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ['secure.ap2labs.org']
+    allowedHosts: ['secure.ap2labs.org', 'internal.ap2labs.org']
   }
 })

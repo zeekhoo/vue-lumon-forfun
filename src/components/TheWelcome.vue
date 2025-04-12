@@ -7,7 +7,19 @@ import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import HelloWorld from './HelloWorld.vue'
 
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
 const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
+
+const toView = (viewName) => {
+  router.push({
+    path: '/projects',
+    query: {
+      name: viewName
+    }
+  });
+}
 </script>
 
 <template>
@@ -57,10 +69,14 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
         <template #heading>Projects</template>
 
         Get official tools and libraries for your project:
-        <RouterLink to="/allenstown">Allentown</RouterLink>,
+        <!-- <RouterLink to="/allenstown">Allentown</RouterLink>,
         <RouterLink to="/dranewsville">Dranesville</RouterLink>,
         <RouterLink to="/siena">Siena</RouterLink>,
-        <RouterLink to="/cold-harbor">Cold Harbor</RouterLink>
+        <RouterLink to="/cold-harbor">Cold Harbor</RouterLink> -->
+        <a href="" @click="toView('allentown')">Allentown</a>,
+        <a href="" @click="toView('dranesville')">Dranesville</a>,
+        <a href="" @click="toView('siena')">Siena</a>,
+        <a href="" @click="toView('coldharbor')">Cold Harbor</a>
         . If you need more resources, we suggest paying
         <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Macrodata Refinement</a>
         a visit.
