@@ -76,8 +76,8 @@ const toView = (viewName) => {
         <a href="" @click="toView('allentown')">Allentown</a>,
         <a href="" @click="toView('dranesville')">Dranesville</a>,
         <a href="" @click="toView('siena')">Siena</a>,
-        <a href="" @click="toView('coldharbor')">Cold Harbor</a>
-        . If you need more resources, we suggest paying
+        <a href="" @click="toView('coldharbor')">Cold Harbor</a>.
+        If you need more resources, we suggest paying
         <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Macrodata Refinement</a>
         a visit.
       </WelcomeItem>

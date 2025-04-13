@@ -2,7 +2,7 @@
   <div>
     <h1 class="">Cold Harbor</h1>
     <div class="inputarea">
-      <p>Enter your refinement data:</p>
+      <p>Please enter your macrodata refinement data:</p>
       <div>
         <input class="textarea" v-model="macrodata" placeholder="The work is mysterious and important..." />
       </div>
@@ -12,9 +12,6 @@
           @click="submit">Submit</button>
       </div>
     </div>
-    <!-- <div class="back-button">
-      <RouterLink to="/">Back</RouterLink>
-    </div> -->
   </div>  
 </template>
 

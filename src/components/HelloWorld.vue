@@ -11,7 +11,7 @@ defineProps({
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      This is an LUMON CORP internal site. It is not intended for public use.
+      Welcome to the LUMON CORP Employee Portal. This is an  internal site.
       <br />
       <br />
       <p class="green"><i>The Work Is Mysterious And Important</i></p>
