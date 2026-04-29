@@ -4,27 +4,25 @@
     <div v-if="showBanner" class="banner">
       {{ bannerMessage }}
     </div>
-    <form>
-      <div class="inputarea">
-        <p>Please enter your macrodata refinement data:</p>
-        <div>
-          <input class="textarea" v-model="macrodata" placeholder="The work is mysterious and important..." />
-        </div>
-        <vue-turnstile
-          class="turnstile"
-          :site-key="sitekey"
-          data-theme="light"
-          data-size="normal"
-          v-model="turnstileToken"
-        ></vue-turnstile>
-        <div>
-          <button 
-            :disabled="!turnstileToken"
-            class="submit-button"
-            @click="submit">Submit</button>
-        </div>
+    <div class="inputarea">
+      <p>Please enter your macrodata refinement data:</p>
+      <div>
+        <input class="textarea" v-model="macrodata" placeholder="The work is mysterious and important..." />
       </div>
-    </form>
+      <vue-turnstile
+        class="turnstile"
+        :site-key="sitekey"
+        theme="auto"
+        size="normal"
+        v-model="turnstileToken"
+      ></vue-turnstile>
+      <div>
+        <button 
+          :disabled="!turnstileToken"
+          class="submit-button"
+          @click="submit">Submit</button>
+      </div>
+    </div>
   </div>  
 </template>
 
@@ -58,13 +56,15 @@ onMounted(() => {
 
 async function submit(event) {
   const value = macrodata.value;
-  const res = await fetch('/cold-harbor', {
+  console.log("Submitting macrodata:", value);
+  const res = await fetch('https://lumonapi.ap2labs.org/api/cold-harbor', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      data: value
+      data: value,
+      turnstileToken: turnstileToken.value
     })
   });
 }

@@ -74,7 +74,8 @@ const toView = (viewName) => {
         <RouterLink to="/siena">Siena</RouterLink>,
         <RouterLink to="/cold-harbor">Cold Harbor</RouterLink> -->
         <a href="" @click="toView('allentown')">Allentown</a>,
-        <a href="" @click="toView('dranesville')">Dranesville</a>,
+        <!-- <a href="" @click="toView('dranesville')">Dranesville</a>, -->
+        <a href="/dranesville">Dranesville</a>,
         <a href="" @click="toView('siena')">Siena</a>,
         <a href="" @click="toView('coldharbor')">Cold Harbor</a>.
         If you need more resources, we suggest paying

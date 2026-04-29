@@ -20,8 +20,8 @@ const router = createRouter({
       component: AllentownView
     },
     {
-      path: '/dranewsville',
-      name: 'dranewsville',
+      path: '/dranesville',
+      name: 'dranesville',
       component: DranesvilleView
     },
     {
